@@ -3,7 +3,7 @@ source("_common.R")
 g <- expand.grid(i = 1:6, j = 1:6)
 B <- g$i + g$j >= 10; A <- g$i == 6 | g$j == 6
 mean(A)                 # P(A) = 11/36
-sum(A & B) / sum(B)     # P(A | B) = 4/6
+sum(A & B) / sum(B)     # P(A | B) = 5/6
 
 set.seed(2027)
 urn <- rep(c("red", "blue"), c(4, 6))

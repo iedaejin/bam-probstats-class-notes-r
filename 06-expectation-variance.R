@@ -33,6 +33,7 @@ n <- 10
 fixed <- replicate(20000, sum(sample(n) == 1:n))   # number of fixed points of a random permutation
 mean(fixed)
 
+x <- 0:3; p <- c(0.1, 0.3, 0.4, 0.2)   # PMF of the example (x was overwritten above)
 c(sum(x^2 * p) - sum(x * p)^2, sum((x - sum(x * p))^2 * p))   # two formulas agree
 integrate(function(x) x^2 * 2 * x, 0, 1)$value - (2 / 3)^2; 1 / 18
 w <- c(0, 0, 0, 0, 4, 10); c(mean(w^2) - mean(w)^2, sqrt(mean(w^2) - mean(w)^2))
